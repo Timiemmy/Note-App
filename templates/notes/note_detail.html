@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between mb-4">
+        <button class="btn btn-secondary btn-block me-3">
+            <a href="{% url 'note_update' note.pk %}">Update Note</a>
+        </button>
+        <button class="btn btn-danger btn-block">
+            <a href="{% url 'note_delete' note.pk %}">Delete Note</a>
+        </button>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">{{note.title}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{note.content}}</p>
+        </div>
+        <div class="card-body">
+            <img src="{{note.image}}" class="card-img-top" />
+        </div>
+        <div class="card-body">
+            <audio controls class="mt-4">
+                <source src="blog-audio-1.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

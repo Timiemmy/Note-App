@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="row">
+    <form method="POST" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        <div class="col-11 col-md-4 mx-auto mt-5">
+            <h1>Are you sure you want to logout?</h1>
+            <div class="border-top pt-5 center">
+                <button class="btn btn-danger me-5" type="submit">Log out</button>
+                <small class="text-muted">
+                    <a href="{% url 'home' %}">Go back</a>
+                </small>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}

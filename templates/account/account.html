@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- User Profile Image -->
+                <div class="text-center">
+                    <img src="{{ user_profile.profile.image.url }}" alt="User Image" class="img-fluid rounded-circle" style="width: 200px;">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- User Profile Details -->
+                <h2>{{ user.username }}'s Profile</h2>
+                <hr>
+                <form>
+                    <div class="form-group mt-3">
+                        <label for="username">Username</label>
+                        <input type="username" class="form-control" id="username" value="{{user.username}}" disabled>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" value="{{user.email}}">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="date_joined">Date Joined</label>
+                        <input type="text" class="form-control" id="date_joined" value="{{user.date_joined}}" disabled>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

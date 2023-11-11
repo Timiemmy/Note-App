@@ -1,0 +1,28 @@
+
+
+/* Custom CSS for the user profile */
+.user-profile {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile img {
+    max-width: 200px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.user-profile h2 {
+    font-size: 28px;
+}
+
+.user-profile label {
+    font-weight: bold;
+}
+
+.user-profile p {
+    font-size: 18px;
+}
+
