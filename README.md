@@ -6,4 +6,4 @@
 ![note4](https://github.com/Timiemmy/Note-App/assets/100134035/14e24853-f863-40f3-83cd-7b1ecde9b47a)
 
 Developed using Django framework and bootstrap.
-Possess auth methods
+It features the CRUD operation and authentication
